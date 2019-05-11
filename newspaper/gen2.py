@@ -23,24 +23,26 @@ def process():
         tag = d.split('/')[-1]
         process_tag(tag, d, f)
 
-def gen_html():
-  content = ''
-
+def gen_images(content):
   for i, (k, v) in enumerate(tags2files.items()):
     for f in v:
       data_str = 'data-rank=' + str(i) + ' data-tag=' + k
-      ext = f.split('.')[1].lower()
-      #print(ext)
-      if ext == 'jpg' or ext == 'png':
+      ext = f.split('.')[-1].lower()
+      if ext == 'jpg' or ext == 'png' or ext == 'jpeg' or ext == 'gif':
         content += '<img src="' + f + '" ' + data_str + '>\n'
       else:
         with open(f, 'r') as txt:
-          content += '<p ' + data_str + '>' + txt.read().strip() + '</p>\n'
+          content += '<p class="tag"' + data_str + '>' + txt.read().strip() + '</p>\n'
+  return content
 
+def gen_html(content):
   with open('template.html', 'r') as template:
     index_str = template.read().replace('** CONTENT **', content)
     print(index_str)
 
+
 process()
 #tagalytics()
-gen_html()
+content = ''
+content = gen_images(content)
+gen_html(content)
