@@ -40,7 +40,7 @@ Markov chain transformation of text.
 
     $ python shaney.py
 
-## Client/Server
+## client-server 
 
 Example of sending data from the browser, and getting it back.
 
