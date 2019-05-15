@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+<script>
+(function() {
+
+var xhr = new XMLHttpRequest()
+xhr.open('POST', '/', true)
+
+//Send the proper header information along with the request
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+
+xhr.onreadystatechange = function() { // Call a function when the state changes.
+  if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+    // Request finished. Do processing here.
+    alert(xhr.responseText)
+  }
+}
+xhr.send(JSON.stringify({ foo: 'bar' }))
+
+})()
+</script>
+</body>
+</html>
+
+
