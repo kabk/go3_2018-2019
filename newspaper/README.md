@@ -2,7 +2,7 @@
 
 To generate the newspaper:
 
-    $ python gen2.py > index.html
+    $ python gen.py > index.html
 
 Open the index.html file in a Webkit browser (ex. Google Chrome)
 
@@ -27,7 +27,7 @@ Note the javascript in template.html needs to know the height of the document.  
 
 ## Change the image or tag content
 
-Look in gen2.py at gen_images function.  There is an example on how to handle the sorting in the tagalytics function.  The tagalytics function is not otherwise used, note it is commented out in the bottom of gen2.py.  It is only there to get information about the tags.
+Look in gen.py at gen_images function.  There is an example on how to handle the sorting in the tagalytics function.  The tagalytics function is not otherwise used, note it is commented out in the bottom of gen.py.  It is only there to get information about the tags.
 
 ## Change out the layout works
 
