@@ -40,4 +40,11 @@ Markov chain transformation of text.
 
     $ python shaney.py
 
+## Client/Server
+
+Example of sending data from the browser, and getting it back.
+
+    $ python server.py
+
+Open a browser to http://localhost:3333/index.html 
 
