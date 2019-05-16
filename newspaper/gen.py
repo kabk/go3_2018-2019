@@ -32,6 +32,9 @@ def gen_images(content):
       ext = f.split('.')[-1].lower()
       if ext == 'jpg' or ext == 'png' or ext == 'jpeg' or ext == 'gif':
         content += '<img src="' + f + '" ' + data_str + '>\n'
+      else:
+        with open(f, 'r') as txt:
+          content += '<p ' + data_str + '>' + txt.read().strip() + '</p>\n'
   return content
 
 def gen_html(content):

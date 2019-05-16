@@ -50,13 +50,6 @@ function place(elems) {
   }
 }
 
-function placeText(elems) {
-  for(let i = 0; i < elems.length; i++) {
-    let p = elems[i]
-    p.style.top = 1402 + 'px'
-  }
-}
-
 const w = window.innerWidth
 //const h = window.innerHeight
 
@@ -69,7 +62,7 @@ console.log(document.querySelector('body'))
 
 place(document.querySelectorAll('.tag'))
 place(document.querySelectorAll('img'))
-placeText(document.querySelectorAll('.txt'))
+place(document.querySelectorAll('p'))
 
 </script>
 </body>
