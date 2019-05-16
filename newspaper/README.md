@@ -39,11 +39,19 @@ There is a data directory/folder which should be next to the python script which
 
     data
      |_ IMAGE_TAGS
-         |_ Article 1
-              |_ image.png
-              |_ foo.txt
-              |_ image2.jpg
-              |_ bar.txt
-         |_ Article 2
+         |_ Project 1
+              |_ tag1
+                |_ image.png
+                |_ foo.txt
+                |_ image2.jpg
+                |_ bar.txt
+                |_ ...
+              |_ tag2
+                |_ image.png
+                |_ foo.txt
+                |_ image2.jpg
+                |_ bar.txt
+                |_ ...
+         |_ Project 2
          |_ ...
 
