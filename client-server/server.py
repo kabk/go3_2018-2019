@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-from http.server import BaseHTTPRequestHandler, HTTPServer
+#from http.server import BaseHTTPRequestHandler, HTTPServer
+import BaseHTTPServer 
 import logging
 import json
 
@@ -7,7 +8,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 port_number = 3333
 
-class S(BaseHTTPRequestHandler):
+class S(BaseHTTPServer.BaseHTTPRequestHandler):
 
   def _set_headers(self):
     self.send_response(200)
@@ -43,7 +44,7 @@ class S(BaseHTTPRequestHandler):
 if __name__ == "__main__":
 
   try:
-    server = HTTPServer(('', port_number), S)
+    server = BaseHTTPServer.HTTPServer(('', port_number), S)
     print("Started HTTP server on port", port_number)
     server.serve_forever()
 
